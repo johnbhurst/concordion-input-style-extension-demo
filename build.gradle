@@ -27,3 +27,7 @@ dependencies {
   testCompile "org.concordion:concordion:$concordionVersion"
   testCompile "org.concordion:concordion-input-style-extension:0.1-SNAPSHOT"
 }
+
+test {
+  systemProperty "concordion.output.dir", "build/concordion"
+}
