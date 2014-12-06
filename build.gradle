@@ -4,7 +4,6 @@
 description = 'Demonstration of the concordion input style extension'
 
 apply plugin: "groovy"
-apply plugin: "idea"
 
 wrapper {
   gradleVersion = "2.2"
