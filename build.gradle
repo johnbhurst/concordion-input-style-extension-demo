@@ -1,0 +1,27 @@
+// John Hurst (john.b.hurst@gmail.com)
+// 2014-12-06
+
+description = 'Demonstration of the concordion input style extension'
+
+apply plugin: "groovy"
+apply plugin: "idea"
+
+wrapper {
+  gradleVersion = "2.2"
+}
+
+repositories {
+  mavenCentral()
+}
+
+project.ext {
+  concordionVersion = "1.4.4"
+  groovyVersion = "2.3.8"
+  junitVersion = "4.11"
+}
+
+dependencies {
+  compile "org.codehaus.groovy:groovy:$groovyVersion"
+  testCompile "junit:junit:$junitVersion"
+  testCompile "org.concordion:concordion:$concordionVersion"
+}
