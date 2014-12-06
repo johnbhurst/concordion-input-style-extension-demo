@@ -11,6 +11,7 @@ wrapper {
 }
 
 repositories {
+  mavenLocal()
   mavenCentral()
 }
 
@@ -24,4 +25,5 @@ dependencies {
   compile "org.codehaus.groovy:groovy:$groovyVersion"
   testCompile "junit:junit:$junitVersion"
   testCompile "org.concordion:concordion:$concordionVersion"
+  testCompile "org.concordion:concordion-input-style-extension:0.1-SNAPSHOT"
 }

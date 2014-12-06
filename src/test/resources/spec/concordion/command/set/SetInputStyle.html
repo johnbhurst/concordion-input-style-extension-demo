@@ -1,0 +1,38 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+<head>
+    <link href="../../../../concordion.css" rel="stylesheet" type="text/css"/>
+    <title>"set" with input style</title>
+</head>
+<body>
+    <p>To enable extensions, set systemProperty -Dconcordion.extensions=org.concordion.ext.inputstyle.InputStyleExtension</p>
+    <h1>Example of using set with input style</h1>
+    <p>
+        Below is an example of using concordion:set with input style where the text contents applied to set is highlighted
+    </p>
+
+    <div class="example">
+        <h3>Example</h3>
+        <p>Message string is set to <span concordion:set="#message">Hello World</span>.  Note the string Hello World is highlighted.</p>
+        <p>Message string is <span concordion:assertEquals="#message">Hello World</span></p>
+    </div>
+
+    <h1>Example of using set with input style for a table</h1>
+    <p>
+        Below is an example of using concordion:set within a table for columns that sets text contents
+    </p>
+
+    <div class="example">
+        <h3>Example</h3>
+        <table concordion:execute="#result = add(#a, #b)">
+          <tr>
+              <th></th>
+              <th concordion:set="#a">Addend</th>
+              <th concordion:set="#b">Addend</th>
+              <th concordion:assertEquals="#result">Result</th>
+          </tr>
+              <tr><td>Example 1</td><td>1</td><td>2</td><td>3</td></tr>
+              <tr><td>Example 2</td><td>2</td><td>3</td><td>5</td></tr>
+        </table>
+    </div>
+</body>
+</html>
