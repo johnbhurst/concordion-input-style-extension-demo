@@ -5,18 +5,14 @@ description = 'Demonstration of the concordion input style extension'
 
 apply plugin: "groovy"
 
-wrapper {
-  gradleVersion = "4.8.1"
-}
-
 repositories {
   mavenCentral()
 }
 
 project.ext {
   concordionVersion = "2.2.0"
-  groovyVersion = "2.3.8"
-  junitVersion = "4.11"
+  groovyVersion = "3.0.8"
+  junitVersion = "4.13.2"
 }
 
 dependencies {
