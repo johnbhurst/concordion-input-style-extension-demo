@@ -4,26 +4,24 @@
 description = 'Demonstration of the concordion input style extension'
 
 apply plugin: "groovy"
-apply plugin: "idea"
-
-wrapper {
-  gradleVersion = "2.2"
-}
 
 repositories {
-  mavenLocal()
   mavenCentral()
 }
 
 project.ext {
-  concordionVersion = "1.4.4"
-  groovyVersion = "2.3.8"
-  junitVersion = "4.11"
+  concordionVersion = "2.2.0"
+  groovyVersion = "3.0.8"
+  junitVersion = "4.13.2"
 }
 
 dependencies {
-  compile "org.codehaus.groovy:groovy:$groovyVersion"
-  testCompile "junit:junit:$junitVersion"
-  testCompile "org.concordion:concordion:$concordionVersion"
-  testCompile "org.concordion:concordion-input-style-extension:0.1-SNAPSHOT"
+  implementation "org.codehaus.groovy:groovy:$groovyVersion"
+  testImplementation "junit:junit:$junitVersion"
+  testImplementation "org.concordion:concordion:$concordionVersion"
+  testImplementation "org.concordion:concordion-input-style-extension:0.1"
+}
+
+test {
+  systemProperty "concordion.output.dir", "build/concordion"
 }
